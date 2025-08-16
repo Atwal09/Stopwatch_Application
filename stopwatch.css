@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.stopwatch-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.display {
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 20px 0;
+    font-family: 'Courier New', monospace;
+    color: #2c3e50;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 80px;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.start {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.start:hover:not(:disabled) {
+    background-color: #27ae60;
+}
+
+.pause {
+    background-color: #e67e22;
+    color: white;
+}
+
+.pause:hover:not(:disabled) {
+    background-color: #d35400;
+}
+
+.reset {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.reset:hover:not(:disabled) {
+    background-color: #c0392b;
+}
+
+.lap {
+    background-color: #3498db;
+    color: white;
+}
+
+.lap:hover:not(:disabled) {
+    background-color: #2980b9;
+}
+
+.laps-container {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.laps-container h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.laps-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.lap-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lap-number {
+    font-weight: bold;
+    color: #7f8c8d;
+}
+
+.lap-time {
+    font-family: 'Courier New', monospace;
+}
+
+@media (max-width: 480px) {
+    .display {
+        font-size: 2.5rem;
+    }
+    
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
